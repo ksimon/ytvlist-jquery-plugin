@@ -1,7 +1,7 @@
 /**************************************************************************
- * Name:   Youtube Video List jQuery plugin
- * Author: ksimon
- * Demo:   
+ * Name:    Youtube Video List jQuery plugin
+ * Author:  ksimon
+ * Website: http://ksimon.github.com/ytvlist-jquery-plugin/
  **************************************************************************
  Description:
   Youtube Video List jQuery plugin can show youtube videos by author, keyword or category.
@@ -165,7 +165,10 @@
 				
 				backP = $("<a/>")
 				.click(backOnClick)
-				
+				.hover(
+					function () { $(this).css("cursor","pointer")},
+					function () { $(this).css("cursor","default")}
+				)
 				.append($("<p/>")
 					.text(settings.msgBack))
 				embedDiv.append(backP);
